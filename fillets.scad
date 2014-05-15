@@ -12,7 +12,7 @@ module fillet_mask (r, h)
 {
     rotate_extrude ()
     translate ([r-h, 0, 0])
-    polygon ([[h, h], [0, h], [h, 0]]);
+    polygon ([[h + 0.1, h + 0.1], [-0.1, h + 0.1], [h + 0.1, -0.1]]);
 }
 
 fillet_mask (r=10, h=1.5);
