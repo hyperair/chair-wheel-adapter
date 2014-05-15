@@ -33,24 +33,6 @@ module shaft (d, h)
     fillet (d/2 - 0.1, fillet_height + 0.1);
 }
 
-module neck ()
-{
-    cylinder (
-        r = shaft_diameter/2 - external_clearance,
-        h = neck_length - external_clearance
-    );
-}
-
-// module shaft ()
-// {
-//     translate ([0, 0, -0.1])
-//     cylinder (
-//         r = shaft_diameter/2 + internal_clearance,
-//         h = neck_length + internal_clearance + 0.1
-//     );
-// }
-
-
 render ()
 difference () {
     body ();
