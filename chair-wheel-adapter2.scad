@@ -4,7 +4,7 @@ shaft_diameter = 10;
 fillet_height = 1.5;
 body_height = 6;
 
-clearance = 0.1;
+clearance = 0.3;
 
 $fa = 1;
 $fs = 0.5;
