@@ -32,14 +32,18 @@ module chair_wheel_adapter (
     legs_height = 20,
     number_of_spokes = 6,
     spoke_thickness = 1,
-    body_bottom_radius = 18,
-    body_top_radius = 35,
+    body_bottom_diameter = 18,
+    body_top_diameter = 35,
     shaft_diameter = 10,
     internal_clearance = 0.1,
     fillet_height = 1.5,
-    fillet_width = 2
+    fillet_width = 2,
+    body_height = 20
 )
 {
+    body_top_radius = body_top_diameter / 2;
+    body_bottom_radius = body_top_radius / 2;
+
     difference () {
         union () {
             translate ([0, 0, body_height])
