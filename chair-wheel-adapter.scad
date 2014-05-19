@@ -1,15 +1,5 @@
 use <fillets.scad>
 
-extra_height = 10;
-body_diameter = 35;
-shaft_diameter = 10;
-neck_length = 25.4;
-shaft_length = 25.4;
-fillet_height = 1.5;
-external_clearance = 0.1;
-internal_clearance = 0.1;
-body_height = extra_height + shaft_length;
-
 $fa = 2;
 $fs = 0.5;
 
