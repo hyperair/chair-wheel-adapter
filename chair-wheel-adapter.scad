@@ -13,11 +13,11 @@ module spokes (number_of_spokes, length, thickness, h)
     }
 }
 
-module legs (d, h, number_of_spokes, spoke_thickness)
+module legs (d, h, number_of_spokes, spoke_thickness, spoke_z_offset)
 {
     difference () {
         cylinder (d=d, h=h);
-        translate ([0, 0, -0.1])
+        translate ([0, 0, spoke_z_offset - 0.1])
         spokes (
             number_of_spokes=number_of_spokes,
             length=d/2 + 0.1,
@@ -32,6 +32,7 @@ module chair_wheel_adapter (
     legs_height = 20,
     number_of_spokes = 6,
     spoke_thickness = 1,
+    spoke_z_offset = 2.75,
     body_bottom_diameter = 18,
     body_top_diameter = 35,
     shaft_inner_diameter = 10,
@@ -53,7 +54,8 @@ module chair_wheel_adapter (
                     d=legs_diameter,
                     h=legs_height,
                     number_of_spokes=number_of_spokes,
-                    spoke_thickness=spoke_thickness
+                    spoke_thickness=spoke_thickness,
+                    spoke_z_offset=spoke_z_offset
                 );
 
                 translate ([0, 0, -0.1])
