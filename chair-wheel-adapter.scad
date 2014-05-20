@@ -34,7 +34,8 @@ module chair_wheel_adapter (
     spoke_thickness = 1,
     body_bottom_diameter = 18,
     body_top_diameter = 35,
-    shaft_diameter = 10,
+    shaft_inner_diameter = 10,
+    shaft_outer_diameter = 16.4,
     internal_clearance = 0.1,
     fillet_height = 1.5,
     fillet_width = 2,
@@ -61,19 +62,19 @@ module chair_wheel_adapter (
             );
 
             translate ([0, 0, body_height])
-            fillet (r=shaft_diameter/2, h=fillet_height, w=fillet_width);
+            fillet (r=shaft_inner_diameter/2, h=fillet_height, w=fillet_width);
         }
 
+        // shaft hole
         translate ([0, 0, -0.1]) {
-            // shaft
             cylinder (
-                r=shaft_diameter/2 + internal_clearance,
+                r=shaft_inner_diameter/2 + internal_clearance,
                 h=legs_height + body_height + 0.2
             );
 
             // expanded fillet for subtraction
             fillet (
-                r=shaft_diameter/2 - 0.1,
+                r=shaft_inner_diameter/2 - 0.1,
                 h=fillet_height + 0.1,
                 w=fillet_width + 0.1 / fillet_height * fillet_width
             );
