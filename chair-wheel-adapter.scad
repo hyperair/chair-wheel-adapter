@@ -29,7 +29,7 @@ module legs (d, h, number_of_spokes, spoke_thickness, spoke_z_offset)
 
 module chair_wheel_adapter (
     legs_diameter = 32,
-    legs_height = 20,
+    legs_height = 15,
     number_of_spokes = 6,
     spoke_thickness = 2.2,
     spoke_z_offset = 2.75,
