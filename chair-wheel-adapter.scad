@@ -8,7 +8,7 @@ module spokes (number_of_spokes, length, thickness, h)
     linear_extrude (h=h)
     for (angle = [0:360/number_of_spokes:359.9]) {
         rotate ([0, 0, angle])
-        translate ([-thickness / 2])
+        translate ([-thickness / 2, 0, 0])
         square (size=[thickness, length]);
     }
 }
