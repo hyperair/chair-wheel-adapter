@@ -48,12 +48,17 @@ module chair_wheel_adapter (
     difference () {
         union () {
             translate ([0, 0, body_height])
-            legs (
-                d=legs_diameter,
-                h=legs_height,
-                number_of_spokes=number_of_spokes,
-                spoke_thickness=spoke_thickness
-            );
+            difference () {
+                legs (
+                    d=legs_diameter,
+                    h=legs_height,
+                    number_of_spokes=number_of_spokes,
+                    spoke_thickness=spoke_thickness
+                );
+
+                translate ([0, 0, -0.1])
+                cylinder (d=shaft_outer_diameter, h=legs_height + 0.2);
+            }
 
             // body
             cylinder (
