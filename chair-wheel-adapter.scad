@@ -37,7 +37,7 @@ module chair_wheel_adapter (
     shaft_inner_diameter = 10,
     shaft_outer_diameter = 16.4,
     internal_clearance = 0.1,
-    fillet_height = 1.5,
+    fillet_height = 3,
     fillet_width = 2,
     body_height = 20
 )
@@ -81,7 +81,7 @@ module chair_wheel_adapter (
             fillet (
                 r=shaft_inner_diameter/2 - 0.1,
                 h=fillet_height + 0.1,
-                w=fillet_width + 0.1 / fillet_height * fillet_width
+                w=fillet_width + 0.1 + 0.1 / fillet_height * fillet_width
             );
         }
     }
