@@ -91,7 +91,6 @@ module chair_wheel_adapter (
     body_top_diameter = 42,
     shaft_inner_diameter = 10,
     shaft_outer_diameter = 20,
-    internal_clearance = 0.1,
     fillet_height = 3,
     fillet_width = 2,
     body_height = 20,
