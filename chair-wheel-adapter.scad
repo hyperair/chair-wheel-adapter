@@ -1,4 +1,5 @@
 use <fillets.scad>
+include <options.scad>
 
 $fa = 2;
 $fs = 0.5;
@@ -80,21 +81,22 @@ module cwa_body (
     }
 }
 
+// Fully assembled chair wheel adapter for viewing
 module chair_wheel_adapter (
-    legs_diameter = 32,
-    legs_height = 15,
-    legs_root_length = 5,
-    number_of_spokes = 6,
-    spoke_thickness = 2.2,
-    spoke_z_offset = 2.75,
-    body_bottom_diameter = 18,
-    body_top_diameter = 42,
-    shaft_inner_diameter = 10,
-    shaft_outer_diameter = 20,
-    fillet_height = 3,
-    fillet_width = 2,
-    body_height = 20,
-    ridge_height = 2
+    legs_diameter = legs_diameter,
+    legs_height = legs_height,
+    legs_root_length = legs_root_length,
+    number_of_spokes = number_of_spokes,
+    spoke_thickness = spoke_thickness,
+    spoke_z_offset = spoke_z_offset,
+    body_bottom_diameter = body_bottom_diameter,
+    body_top_diameter = body_top_diameter,
+    shaft_inner_diameter = shaft_inner_diameter,
+    shaft_outer_diameter = shaft_outer_diameter,
+    fillet_height = fillet_height,
+    fillet_width = fillet_width,
+    body_height = body_height,
+    ridge_height = ridge_height
 )
 {
     body_top_radius = body_top_diameter / 2;
