@@ -40,6 +40,7 @@ module cwa_body (
     legs_d, legs_root_h,
     shaft_id, shaft_od,
     fillet_h, fillet_w,
+    with_socket = false
 )
 {
     difference () {
@@ -77,6 +78,16 @@ module cwa_body (
                 h = fillet_h + 0.1,
                 w = fillet_w + 0.1 + 0.1 / fillet_h * fillet_w
             );
+        }
+
+        // leg socket
+        if (with_socket) {
+            translate ([0, 0, h - legs_root_h])
+            difference () {
+                cylinder (d=legs_d, h=legs_root_h + 0.1);
+                translate ([0, 0, -0.1])
+                cylinder (d=shaft_od, h=legs_root_h + 0.3);
+            }
         }
     }
 }
