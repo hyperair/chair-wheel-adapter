@@ -111,7 +111,7 @@ module chair_wheel_adapter (
 )
 {
     body_top_radius = body_top_diameter / 2;
-    body_bottom_radius = body_top_radius / 2;
+    body_bottom_radius = body_bottom_diameter / 2;
     shaft_wall_thickness_outside_fillet =
         (shaft_outer_diameter - shaft_inner_diameter) / 2 -
         fillet_width;
