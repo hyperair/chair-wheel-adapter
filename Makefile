@@ -2,7 +2,7 @@ INKSCAPEDIR = /usr/share/inkscape/extensions/
 DXF_OUTLINES = $(INKSCAPEDIR)/dxf_outlines.py
 OPENSCAD = openscad
 
-SCADFILES = chair-wheel-adapter.scad
+SCADFILES = chair-wheel-adapter.scad chair-wheel-adapter-legs.scad chair-wheel-adapter-body.scad
 STLFILES = $(SCADFILES:.scad=.stl)
 DEPFILES = $(addsuffix deps,$(SCADFILES))
 
